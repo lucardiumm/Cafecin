@@ -52,6 +52,8 @@ app.on('ready', () => {
       submenu: [
         {
           label: '15 minutes',
+          type: 'radio',
+          checked: time === 15 * 60 * 1000,
           click: () => {
             time = 15 * 60 * 1000
             writeTime(time)
@@ -59,6 +61,8 @@ app.on('ready', () => {
         },
         {
           label: '30 minutes',
+          type: 'radio',
+          checked: time === 30 * 60 * 1000,
           click: () => {
             time = 30 * 60 * 1000
             writeTime(time)
@@ -66,6 +70,8 @@ app.on('ready', () => {
         },
         {
           label: '45 minutes',
+          type: 'radio',
+          checked: time === 45 * 60 * 1000,
           click: () => {
             time = 45 * 60 * 1000
             writeTime(time)
@@ -73,6 +79,8 @@ app.on('ready', () => {
         },
         {
           label: '1 hour',
+          type: 'radio',
+          checked: time === 1 * Math.pow(60, 2) * 1000,
           click: () => {
             time = 1 * Math.pow(60, 2) * 1000
             writeTime(time)
@@ -80,6 +88,8 @@ app.on('ready', () => {
         },
         {
           label: '2 hours',
+          type: 'radio',
+          checked: time === 2 * Math.pow(60, 2) * 1000,
           click: () => {
             time = 2 * Math.pow(60, 2) * 1000
             writeTime(time)
@@ -87,6 +97,8 @@ app.on('ready', () => {
         },
         {
           label: 'Indefinitely',
+          type: 'radio',
+          checked: time === 0,
           click: () => {
             time = 0
             writeTime(time)
